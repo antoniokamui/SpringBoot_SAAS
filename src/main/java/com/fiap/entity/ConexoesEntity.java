@@ -16,7 +16,6 @@ public class ConexoesEntity {
     private int timeout;
     private String ip;
     private int id;
-    private Integer idUsuario;
 
     @Basic
     @Column(name = "macaddress", nullable = true, length = 100)
@@ -98,16 +97,6 @@ public class ConexoesEntity {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "id_usuario", nullable = true)
-    public Integer getIdUsuario() {
-        return idUsuario;
-    }
-
-    public void setIdUsuario(Integer idUsuario) {
-        this.idUsuario = idUsuario;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -123,7 +112,6 @@ public class ConexoesEntity {
         if (password != null ? !password.equals(that.password) : that.password != null) return false;
         if (tokensegunca != null ? !tokensegunca.equals(that.tokensegunca) : that.tokensegunca != null) return false;
         if (ip != null ? !ip.equals(that.ip) : that.ip != null) return false;
-        if (idUsuario != null ? !idUsuario.equals(that.idUsuario) : that.idUsuario != null) return false;
 
         return true;
     }
@@ -138,7 +126,6 @@ public class ConexoesEntity {
         result = 31 * result + timeout;
         result = 31 * result + (ip != null ? ip.hashCode() : 0);
         result = 31 * result + id;
-        result = 31 * result + (idUsuario != null ? idUsuario.hashCode() : 0);
         return result;
     }
 }

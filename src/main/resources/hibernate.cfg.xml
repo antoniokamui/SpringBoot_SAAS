@@ -6,8 +6,9 @@
   <session-factory>
     <property name="connection.url">jdbc:postgresql://fiapdb.c9kpnhchhxf3.us-west-2.rds.amazonaws.com:5432/fiapdb</property>
     <property name="connection.driver_class">org.postgresql.Driver</property>
-    <mapping class="com.fiap.entity.ConexoesEntity"/>
+      <mapping class="com.fiap.entity.ConexoesEntity"/>
       <mapping class="com.fiap.entity.UsuarioEntity"/>
+      <mapping class="com.fiap.entity.ConexaoUsuarioEntity"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
